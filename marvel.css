@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif
+}
+.promo {
+    height: 100vh;
+    background: url(human.png) no-repeat  90% 100%, url(kolco.svg) no-repeat 100% 0, url(kolco.svg) no-repeat 65% 90%;
+    background-size: auto 80%, auto 60%, 12%;
+    padding-left: 10%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center
+}
+@media screen and (max-width: 650px) {
+    .promo {
+       background: url(human.png) no-repeat  90% 100%, url(kolco.svg) no-repeat 100% 0;
+        background-size: auto 80%, auto 60%;
+    }
+}
+.slider {
+    width: 40%;
+    
+    
+}
+label {
+    font-size: 0;
+    margin-right: 10px
+}
+label svg {
+    height: 10px;
+    width: 50px;
+    margin: 0;
+}
+label rect {
+    fill: #cccccc;
+}
+
+label rect:hover {
+    fill: yellow;
+}
+label:focus rect {
+    fill: #a8a4a4;
+}
+.slider-radio {
+    display: none
+}
+.slide h2 {
+    margin: 0;
+    padding: 20px 0;
+    background: url(23.svg) no-repeat 0 0;
+    background-size: auto 100%;
+    text-transform: uppercase;
+    font-size: 40px
+}
+@media (max-width: 500px) {
+    .slide h2 {background: none; font-size: 32px}
+}
+
+
+.slide:nth-of-type(1) input[type="radio"]:not(:checked) ~ .content,
+.slide:nth-of-type(2) input[type="radio"]:not(:checked) ~ .content,
+.slide:nth-of-type(3) input[type="radio"]:not(:checked) ~ .content
+{
+    display: none;
+}
+.slide:nth-of-type(1) input[type="radio"]:checked ~ .content {
+    display: block;
+}
+.slide:nth-of-type(2) input[type="radio"]:checked ~ .content {
+    display: block;
+}
+.slide:nth-of-type(3) input[type="radio"]:checked ~ .content {
+    display: block;
+}
+.slider a {
+    display: inline-block;
+    padding: 15px 40px;
+    border: 2px solid black;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.slider a:hover {
+    color: gray;
+    border: 2px solid gray;
+}
+
+header {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: #333333;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+}
+.container {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+.logo {
+    margin-right: 30px
+}
+header li {
+    display: inline-block;
+    margin-right: 15px;
+    text-transform: uppercase;
+    color: white
+}
+.header-checkbox {
+    display: none; 
+}
+.header-checkbox:checked ~ header {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+   
+    
+}
+.header-checkbox:checked ~ header .container {
+    display: block
+}
+.header-checkbox:checked ~ header li {
+    display: block;
+    margin: 0;
+    margin-bottom: 10px
+}
+
+.label__header-checkbox {
+    display: none;
+    width: 30px;
+    height: 30px;
+    background: pink;
+    position: fixed;
+    top: 0;
+    left: 0
+}
+.header-checkbox:checked ~ label {
+  left: 250px  
+}
+@media (max-width: 700px) {
+    .label__header-checkbox {display: block}
+    
+}
